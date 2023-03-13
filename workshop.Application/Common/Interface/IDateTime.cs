@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace workshop.Application.Common.Interface
 {
-    internal interface IDateTime
+    public interface IDateTime
     {
+        public DateTime Now { get; }
     }
 }
