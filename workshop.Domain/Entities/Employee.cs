@@ -10,6 +10,9 @@ namespace workshop.Domain.Entities
     public class Employee : BaseEntity
     {
         public Guid Id { get; set; } = Guid.NewGuid();
-
+        public string Name { get; set; }
+        public int DepartmentId { get; set; }
+        public double Salary { get; set; }
+        public string Contact { get; set; }
     }
 }
