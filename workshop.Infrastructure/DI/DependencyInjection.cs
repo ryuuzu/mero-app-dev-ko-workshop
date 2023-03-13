@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using workshop.Application.Common.Interface;
 using workshop.Infrastructure.Persistence;
+using workshop.Infrastructure.Services;
 
 namespace workshop.Infrastructure.DI
 {
@@ -21,7 +22,7 @@ namespace workshop.Infrastructure.DI
                 b => b.MigrationsAssembly(typeof(ApplicationDBContext).Assembly.FullName)), ServiceLifetime.Transient);
 
             services.AddScoped<IApplicationDBContext>(provider => (IApplicationDBContext)provider.GetServices<ApplicationDBContext>());
-            //services.AddTransient<IDateTime, DateTimeService>();
+            services.AddTransient<IDateTime, DateTimeService>();
             return services;
         }
     }
