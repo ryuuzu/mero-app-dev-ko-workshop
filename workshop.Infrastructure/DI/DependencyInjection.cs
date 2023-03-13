@@ -12,7 +12,7 @@ using workshop.Infrastructure.Persistence;
 
 namespace workshop.Infrastructure.DI
 {
-    public class DependencyInjection
+    public static class DependencyInjection
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
