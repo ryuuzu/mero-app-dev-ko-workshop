@@ -19,7 +19,8 @@ namespace workshop.Infrastructure.DI
         {
             services.AddDbContext<ApplicationDBContext>(
                 options => options.UseNpgsql(configuration.GetConnectionString("WorkshopDatabasePostgreSQL"),
-                b => b.MigrationsAssembly(typeof(ApplicationDBContext).Assembly.FullName)), ServiceLifetime.Transient);
+                b => b.MigrationsAssembly(typeof(ApplicationDBContext).Assembly.FullName)),
+                ServiceLifetime.Transient);
 
             services.AddScoped<IApplicationDBContext>(provider => (IApplicationDBContext)provider.GetServices<ApplicationDBContext>());
             services.AddTransient<IDateTime, DateTimeService>();
