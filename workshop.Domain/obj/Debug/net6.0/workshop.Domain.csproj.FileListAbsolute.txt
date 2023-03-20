@@ -1,0 +1,12 @@
+G:\Assignments\workshop.api\workshop.Domain\bin\Debug\net6.0\workshop.Domain.deps.json
+G:\Assignments\workshop.api\workshop.Domain\bin\Debug\net6.0\workshop.Domain.dll
+G:\Assignments\workshop.api\workshop.Domain\bin\Debug\net6.0\workshop.Domain.pdb
+G:\Assignments\workshop.api\workshop.Domain\obj\Debug\net6.0\workshop.Domain.csproj.AssemblyReference.cache
+G:\Assignments\workshop.api\workshop.Domain\obj\Debug\net6.0\workshop.Domain.GeneratedMSBuildEditorConfig.editorconfig
+G:\Assignments\workshop.api\workshop.Domain\obj\Debug\net6.0\workshop.Domain.AssemblyInfoInputs.cache
+G:\Assignments\workshop.api\workshop.Domain\obj\Debug\net6.0\workshop.Domain.AssemblyInfo.cs
+G:\Assignments\workshop.api\workshop.Domain\obj\Debug\net6.0\workshop.Domain.csproj.CoreCompileInputs.cache
+G:\Assignments\workshop.api\workshop.Domain\obj\Debug\net6.0\workshop.Domain.dll
+G:\Assignments\workshop.api\workshop.Domain\obj\Debug\net6.0\refint\workshop.Domain.dll
+G:\Assignments\workshop.api\workshop.Domain\obj\Debug\net6.0\workshop.Domain.pdb
+G:\Assignments\workshop.api\workshop.Domain\obj\Debug\net6.0\ref\workshop.Domain.dll
