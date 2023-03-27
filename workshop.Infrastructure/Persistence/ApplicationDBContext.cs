@@ -9,7 +9,7 @@ using workshop.Domain.Entities;
 
 namespace workshop.Infrastructure.Persistence
 {
-    public class ApplicationDBContext : DbContext, IApplicationDBContext
+    public class ApplicationDBContext : IdentityDbContext<IdentityUser, IdentityRole, string>, IApplicationDBContext
     {
         private readonly IDateTime _dateTime;
 
