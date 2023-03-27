@@ -26,5 +26,5 @@ namespace workshop.Infrastructure.DI
             services.AddTransient<IDateTime, DateTimeService>();
             return services;
         }
-    }d
+    }
 }
