@@ -18,9 +18,18 @@ namespace workshop.Infrastructure.Services
             _dbContext = dbContext;
         }
 
-        public Task<Employee> AddEmployeeDetails(EmployeeRequestDTO employee)
+        public async Task<Employee> AddEmployeeDetails(EmployeeRequestDTO employee)
         {
-            throw new NotImplementedException();
+            var employeeDetails = new Employee()
+            {
+                Name = employee.Name,
+                DepartmentId = employee.DepartmentId,
+                Salary = employee.Salary,
+                Contact = employee.Contact,
+            };
+            await _dbContext.Employee.AddAsync(employeeDetails);
+            //await _dbContext.SaveChangesAsync(default(CancellationToken));
+            return employeeDetails;
         }
     }
 }
