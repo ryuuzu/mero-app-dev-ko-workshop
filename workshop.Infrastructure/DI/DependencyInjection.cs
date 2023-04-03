@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -21,6 +22,13 @@ namespace workshop.Infrastructure.DI
                 options => options.UseNpgsql(configuration.GetConnectionString("WorkshopDatabasePostgreSQL"),
                 b => b.MigrationsAssembly(typeof(ApplicationDBContext).Assembly.FullName)),
                 ServiceLifetime.Transient);
+
+            services.AddIdentityCore<IdentityUser>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = true;
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 5;
+            }).AddEntityFrameworkStores<ApplicationDBContext>();
 
             services.AddScoped<IApplicationDBContext>(provider => (IApplicationDBContext)provider.GetServices<ApplicationDBContext>());
             services.AddTransient<IDateTime, DateTimeService>();
