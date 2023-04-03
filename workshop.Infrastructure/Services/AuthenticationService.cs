@@ -40,7 +40,7 @@ namespace workshop.Infrastructure.Services
                 return new ResponseDTO
                 {
                     Status = "Error",
-                    Message = "User creation failed! Please check user details."
+                    Message = "User creation failed! Please check user details and try again."
                 };
             }
             return new ResponseDTO { Status = "Success", Message = "User created successfully!" };

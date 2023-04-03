@@ -24,6 +24,7 @@ namespace workshop.Infrastructure.DI
 
             services.AddScoped<IApplicationDBContext>(provider => (IApplicationDBContext)provider.GetServices<ApplicationDBContext>());
             services.AddTransient<IDateTime, DateTimeService>();
+            services.AddTransient<IAuthentication, AuthenticationService>();
             return services;
         }
     }
